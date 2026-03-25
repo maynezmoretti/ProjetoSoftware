@@ -1,0 +1,44 @@
+cd ~
+dir
+mkdir ProjetoSoftware
+cd ProjetoSoftware
+mkdir Documentos
+mkdir Scripts
+mkdir Recursos
+mkdir Backup
+dir
+notepad README.md
+cd Scripts
+notepad script1.bat
+notepad script2.bat
+copy C:\ProjetoSoftware\Scripts\README.md.ext C:\Documentos
+..
+cd ..
+copy README.md ..\Documentos
+move Scripts\script2.bat Recursos\
+ren script1.bat main.bat
+cd Scripts
+ren script1.bat main.bat
+cd ..
+rmdir Backup
+robocopy ProjetoSoftware ProjetoSoftware_Backup /E
+rd  /s /q Backup
+dir
+xcopy ProjetoSoftware ProjetoSoftware_Backup /E /I /H
+dir
+cd ..
+dir
+xcopy ProjetoSoftware ProjetoSoftware_Backup /E /I/ H
+dir
+copy ProjetoSoftware ProjetoSoftware_Backup
+cd ProjetoSoftware
+dir
+cd ..
+dir
+del ProjetoSoftware_Backup.txt && mkdir ProjetoSoftware_Backup.txt
+del ProjetoSoftware_Backup && mkdir ProjetoSoftware_Backup.txt
+del ProjetoSoftware_Backup && mkdir ProjetoSoftware_Backup
+xcopy "ProjetoSoftware" "ProjetoSoftware_Backup" /E /I/H /Y
+doskey /history > history.txt
+cd ProjetoSoftware
+doskey /history > history.txt
