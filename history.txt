@@ -1,19 +1,3 @@
-cd ~
-dir
-mkdir ProjetoSoftware
-cd ProjetoSoftware
-mkdir Documentos
-mkdir Scripts
-mkdir Recursos
-mkdir Backup
-dir
-notepad README.md
-cd Scripts
-notepad script1.bat
-notepad script2.bat
-copy C:\ProjetoSoftware\Scripts\README.md.ext C:\Documentos
-..
-cd ..
 copy README.md ..\Documentos
 move Scripts\script2.bat Recursos\
 ren script1.bat main.bat
@@ -41,4 +25,26 @@ del ProjetoSoftware_Backup && mkdir ProjetoSoftware_Backup
 xcopy "ProjetoSoftware" "ProjetoSoftware_Backup" /E /I/H /Y
 doskey /history > history.txt
 cd ProjetoSoftware
+doskey /history > history.txt
+git init
+git add .
+git commit -m "Primeiro commit"
+git config --global user.name "maynezmoretti"
+git comfig --global user.email "maynezardo@gmail.com"
+git add .
+git commit -m "Primeiro commit"
+git config --global user.name "maynezmoretti"
+git config --global user.email "maynezardo@gmail.com"
+git add .
+git commit -m "Primeiro commit"
+git remote add origin https://github.com/maynezmoretti/ProjetoSoftware
+git branch -M main
+git push -u origin main
+tree ProjetoSoftware
+tree ProjetoSoftware /F
+tree ProjetoSoftware /f
+duskey /history
+doskey /history
+git status
+tree /f
 doskey /history > history.txt
